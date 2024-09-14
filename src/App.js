@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import AboutMe from './About';
+import Contact from './Contact';
+import Projects from './Projects';
+import ScrollToTop from './ScrollToTop'; 
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
+
+      <section id="about">
+        <AboutMe />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <br /><br /><br /><br /><br />
+
+      <section id="contact">
+        <Contact />
+      </section>
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
         </a>
       </header>
+
+      <ScrollToTop />
     </div>
   );
 }
